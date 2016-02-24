@@ -1,0 +1,359 @@
+<style>
+select {
+	width:140px;
+}
+/*table tbody tr td table tbody tr td table tbody tr td {*/
+tr td tr td tr td {
+	width: 140px;
+}
+#scores td {
+	width: 380px;
+	text-align: center;
+}
+</style>
+<table>
+	<tr>
+		<th colspan="2">Likelihood</th>
+	</tr>
+	<tr id=tr_likelihood>
+		<td>
+			<table>
+				<tr>
+					<th colspan='4'>Threat agent factors</th>
+				</tr><tr>
+					<td>
+						<table>
+							<tr>
+								<td>Skill Level</td>
+							</tr><tr>
+								<td><select>
+									<option value='1'> No technical skills</option>
+									<option value='3'>Some technical skills</option>
+									<option value='5'>Advanced computer user</option>
+									<option value='6'>Network and programming skills</option>
+									<option value='9'>Security penetration skills</option>
+								</select></td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<table>
+							<tr>
+								<td>Motive</td>
+							</tr><tr>
+								<td><select>
+									<option value='1'>Low or no reward</option>
+									<option value='4'>Possible reward</option>
+									<option value='9'>High reward</option>
+								</select></td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<table>
+							<tr>
+								<td>Opportunity</td>
+							</tr><tr>
+								<td><select>
+									<option value='0'>Full access or expensive resources required</option>
+									<option value='4'>Special access or resources required</option>
+									<option value='7'>Some access or resources required</option>
+									<option value='9'>No access or resources required</option>
+								</select></td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<table>
+							<tr>
+								<td>Size</td>
+							</tr><tr>
+								<td><select>
+									<option value='2'>Developers, system administrators</option>
+									<option value='4'>Intranet users</option>
+									<option value='5'>Partners</option>
+									<option value='6'>Authenticated users</option>
+									<option value='9'>Anonymous Internet users</option>
+								</select></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td><td>
+			<table>
+				<tr>
+					<th colspan='4'>Vulnerability factors</th>
+				</tr><tr>
+					<td>
+						<table>
+							<tr>
+								<td>Ease of Discovery</td>
+							</tr><tr>
+								<td><select>
+									<option value='1'>Practically impossible</option>
+									<option value='3'>Difficult</option>
+									<option value='7'>Easy</option>
+									<option value='9'>Automated tools available</option>
+								</select></td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<table>
+							<tr>
+								<td>Ease of Exploit</td>
+							</tr><tr>
+								<td><select>
+									<option value='1'>Theoretical</option>
+									<option value='3'>Difficult</option>
+									<option value='5'>Easy</option>
+									<option value='9'>Automated tools available</option>
+								</select></td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<table>
+							<tr>
+								<td>Awareness</td>
+							</tr><tr>
+								<td><select>
+									<option value='1'>Unknown</option>
+									<option value='4'>Hidden</option>
+									<option value='6'>Obvious</option>
+									<option value='9'>Public knowledge</option>
+								</select></td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<table>
+							<tr>
+								<td>Intrusion Detection</td>
+							</tr><tr>
+								<td><select>
+									<option value='1'>Active detection in application</option>
+									<option value='3'>Logged and reviewed</option>
+									<option value='8'>Logged without review</option>
+									<option value='9'>Not logged</option>
+								</select></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<th colspan="2">Impact</th>
+	</tr>
+	<tr>
+		<td>
+			<table>
+				<tr>
+					<th colspan='4'>Technical Impact</th>
+				</tr><tr id=tr_techimpact>
+					<td>
+						<table>
+							<tr>
+								<td>Loss of Confidentiality</td>
+							</tr><tr>
+								<td><select>
+									<option value='2'>Minimal non-sensitive data disclosed</option>
+									<option value='4'>Minimal critical data disclosed, extensive non-sensitive data disclosed</option>
+									<option value='5'>Extensive critical data disclosed</option>
+									<option value='9'>All data disclosed</option>
+								</select></td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<table>
+							<tr>
+								<td>Loss of Integrity</td>
+							</tr><tr>
+								<td><select>
+									<option value='1'>Minimal slightly corrupt data</option>
+									<option value='3'>Minimal seriously corrupt data</option>
+									<option value='5'>Extensive slightly corrupt data</option>
+									<option value='7'>Extensive seriously corrupt data</option>
+									<option value='9'>All data totally corrupt</option>
+								</select></td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<table>
+							<tr>
+								<td>Loss of Availability</td>
+							</tr><tr>
+								<td><select>
+									<option value='1'>Minimal secondary services interrupted</option>
+									<option value='5'>Minimal primary services interrupted, extensive secondary services interrupted</option>
+									<option value='7'>Extensive primary services interrupted</option>
+									<option value='9'>All services completely lost</option>
+								</select></td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<table>
+							<tr>
+								<td>Loss of Accountability</td>
+							</tr><tr>
+								<td><select>
+									<option value='1'>Fully traceable</option>
+									<option value='7'>Possibly traceable</option>
+									<option value='9'>Completely anonymous</option>
+								</select></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td><td>
+			<table>
+				<tr>
+					<th colspan='4'>Business Impact</th>
+				</tr><tr id=tr_busiimpact>
+					<td>
+						<table>
+							<tr>
+								<td>Financial Damage</td>
+							</tr><tr>
+								<td><select>
+									<option value='1'>Less than the cost to fix the vulnerability</option>
+									<option value='3'>Minor effect on annual profit</option>
+									<option value='7'>Significant effect on annual profit</option>
+									<option value='9'>Bankruptcy</option>
+								</select></td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<table>
+							<tr>
+								<td>Reputation Damage</td>
+							</tr><tr>
+								<td><select>
+									<option value='1'>Minimal damage</option>
+									<option value='4'>Loss of major accounts</option>
+									<option value='5'>Loss of goodwill</option>
+									<option value='9'>Brand damage</option>
+								</select></td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<table>
+							<tr>
+								<td>Non-Compliance</td>
+							</tr><tr>
+								<td><select>
+									<option value='2'>Minor violation</option>
+									<option value='5'>Clear violation</option>
+									<option value='7'>High profile violation</option>
+								</select></td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						<table>
+							<tr>
+								<td>Privacy Violation</td>
+							</tr><tr>
+								<td><select>
+									<option value='3'>One individual</option>
+									<option value='5'>Hundreds of people</option>
+									<option value='7'>Thousands of people</option>
+									<option value='9'>Millions of people</option>
+								</select></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<table id=scores>
+				<tr>
+					<th colspan=2>Overall likelihood</th>
+					<th colspan=2>Overall technical impact</th>
+					<th colspan=2>Overall business impact:</th>
+				</tr><tr>
+					<td id=likelihood>1</td><td>LOW</td>
+					<td id=techimpact>1.25</td><td>LOW</td>
+					<td id=busiimpact>1.75</td><td>LOW</td>
+				</tr><tr>
+					<th colspan=6>Risk</th>
+				</tr><tr>
+					<td colspan=6 id=risk>NOTE</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<script type="text/javascript">
+	function value2text(value){
+		return value < 3 ? "LOW" : (value < 6 ? "MEDIUM" : "HIGH");
+	}
+	function globalUpdate(){
+		var likelihood = parseFloat(document.getElementById('likelihood').textContent);
+		var techimpact = parseFloat(document.getElementById('techimpact').textContent);
+		var busiimpact = parseFloat(document.getElementById('busiimpact').textContent);
+		var impact = ( techimpact + busiimpact ) / 2
+		function val2score(value){
+			return value < 3 ? 0 : (value < 6 ? 1 : 2);
+		}
+		function score2text(score){
+			return ['NOTE','LOW','MEDIUM','HIGH','CRITICAL'][score];
+		}
+		var score = val2score(likelihood) + val2score(impact);
+		var elm = document.getElementById('risk');
+		elm.textContent = score2text(score);
+	}
+	function getStatus(){
+		var selects = document.querySelectorAll("select");
+		var status = Array.prototype.reduce.call( selects, function(status,elm){
+			if(status === '')
+				return elm.value;
+			else
+				return status + "," + elm.value;
+		},'');
+		return status;
+	}	
+	function setStatus(status){
+		var status = status.replace(/^#/,'').split(",").map(function(n){return parseInt(n)});
+		if(status.length != 16)
+			return;
+		var selects = document.querySelectorAll("select");
+		Array.prototype.map.call( selects, function(elm,index){
+			elm.value = status[index];
+			elm.onchange();
+		});
+	}
+	var sections = ["likelihood",'techimpact','busiimpact'];
+	sections.map(
+		function(name){
+			var updateFunc = function(){
+				var selects = document.querySelectorAll("#tr_" + name + " select");
+				var value = Array.prototype.reduce.call( selects, function(sum,elm){
+					return sum + parseInt(elm.value);
+				},0) / parseFloat(selects.length);
+				var elm = document.getElementById(name);
+				elm.textContent = value;
+				elm.nextSibling.textContent = value2text(value);
+				globalUpdate();
+				window.location.hash = getStatus();
+			};
+			var selects = document.querySelectorAll("#tr_"+name+" select");
+			Array.prototype.map.call( selects, function(elm){
+				elm.onchange = updateFunc;
+			});
+		}
+	);
+	setStatus(window.location.hash);
+</script>
