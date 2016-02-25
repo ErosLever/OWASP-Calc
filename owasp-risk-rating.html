@@ -393,17 +393,6 @@ tr td tr td tr td {
 	</tr>
 </table>
 <script type="text/javascript">
-	function init(){
-		var selects = document.querySelectorAll("select");
-		Array.prototype.reduce.call( selects, function(table,elm){
-			var mytable = elm.parentNode.parentNode.parentNode;
-			if(table == null)
-				table = mytable;
-			if(mytable == table){
-
-			}
-		},null);
-	}
 	function value2text(value){
 		return value < 3 ? "LOW" : (value < 6 ? "MEDIUM" : "HIGH");
 	}
