@@ -26,17 +26,26 @@ div.section{
 .section th, .section td, .section select {
 	width: 140px;
 }
+.section select {
+	background-color: transparent;
+}
 .section td {
 	height: 2em;
+}
+#likelihood,#techimpact,#busiimpact {
+	border-right: none;
+}
+#likelihood+td,#techimpact+td,#busiimpact+td {
+	border-left: none;
 }
 </style>
 <div id=main>
 	<h3>
 		Likelihood
 	</h3>
-	<div class=mainrow	 id=tr_likelihood>
+	<div class=mainrow id=tr_likelihood>
 		<div class=section>
-			<h4>Threat agent factors</h4>
+			<h4>Threat Agent Factors</h4>
 			<table>
 				<tr>
 					<th>Skill Level</th>
@@ -46,7 +55,7 @@ div.section{
 				</tr><tr>
 					<td><select>
 						<option value='0'>0</option>
-						<option value='1'>1 - No technical skills</option>
+						<option value='1' selected>1 - No technical skills</option>
 						<option value='2'>2</option>
 						<option value='3'>3 - Some technical skills</option>
 						<option value='4'>4</option>
@@ -58,7 +67,7 @@ div.section{
 					</select></td>
 					<td><select>
 						<option value='0'>0</option>
-						<option value='1'>1 - Low or no reward</option>
+						<option value='1' selected>1 - Low or no reward</option>
 						<option value='2'>2</option>
 						<option value='3'>3</option>
 						<option value='4'>4 - Possible reward</option>
@@ -69,7 +78,7 @@ div.section{
 						<option value='9'>9 - High reward</option>
 					</select></td>
 					<td><select>
-						<option value='0'>0 - Full access or expensive resources required</option>
+						<option value='0' selected>0 - Full access or expensive resources required</option>
 						<option value='1'>1</option>
 						<option value='2'>2</option>
 						<option value='3'>3</option>
@@ -83,7 +92,7 @@ div.section{
 					<td><select>
 						<option value='0'>0</option>
 						<option value='1'>1</option>
-						<option value='2'>2 - Developers, system administrators</option>
+						<option value='2' selected>2 - Developers, system administrators</option>
 						<option value='3'>3</option>
 						<option value='4'>4 - Intranet users</option>
 						<option value='5'>5 -Partners</option>
@@ -96,7 +105,7 @@ div.section{
 			</table>
 		</div>
 		<div class=section>
-			<h4>Vulnerability factors</h4>
+			<h4>Vulnerability Factors</h4>
 			<table>
 				<tr>
 					<th>Ease of Discovery</th>
@@ -106,7 +115,7 @@ div.section{
 				</tr><tr>
 					<td><select>
 						<option value='0'>0</option>
-						<option value='1'>1 - Practically impossible</option>
+						<option value='1' selected>1 - Practically impossible</option>
 						<option value='2'>2</option>
 						<option value='3'>3 - Difficult</option>
 						<option value='4'>4</option>
@@ -118,7 +127,7 @@ div.section{
 					</select></td>
 					<td><select>
 						<option value='0'>0</option>
-						<option value='1'>1 - Theoretical</option>
+						<option value='1' selected>1 - Theoretical</option>
 						<option value='2'>2</option>
 						<option value='3'>3 - Difficult</option>
 						<option value='4'>4</option>
@@ -130,7 +139,7 @@ div.section{
 					</select></td>
 					<td><select>
 						<option value='0'>0</option>
-						<option value='1'>1 - Unknown</option>
+						<option value='1' selected>1 - Unknown</option>
 						<option value='2'>2</option>
 						<option value='3'>3</option>
 						<option value='4'>4 - Hidden</option>
@@ -142,7 +151,7 @@ div.section{
 					</select></td>
 					<td><select>
 						<option value='0'>0</option>
-						<option value='1'>1 - Active detection in application</option>
+						<option value='1' selected>1 - Active detection in application</option>
 						<option value='2'>2</option>
 						<option value='3'>3 - Logged and reviewed</option>
 						<option value='4'>4</option>
@@ -173,7 +182,7 @@ div.section{
 					<td><select>
 						<option value='0'>0</option>
 						<option value='1'>1</option>
-						<option value='2'>2 - Minimal non-sensitive data disclosed</option>
+						<option value='2' selected>2 - Minimal non-sensitive data disclosed</option>
 						<option value='3'>3</option>
 						<option value='4'>4 - Minimal critical data disclosed, extensive non-sensitive data disclosed</option>
 						<option value='5'>5 - Extensive critical data disclosed</option>
@@ -184,7 +193,7 @@ div.section{
 					</select></td>
 					<td><select>
 						<option value='0'>0</option>
-						<option value='1'>1 - Minimal slightly corrupt data</option>
+						<option value='1' selected>1 - Minimal slightly corrupt data</option>
 						<option value='2'>2</option>
 						<option value='3'>3 - Minimal seriously corrupt data</option>
 						<option value='4'>4</option>
@@ -196,7 +205,7 @@ div.section{
 					</select></td>
 					<td><select>
 						<option value='0'>0</option>
-						<option value='1'>1 - Minimal secondary services interrupted</option>
+						<option value='1' selected>1 - Minimal secondary services interrupted</option>
 						<option value='2'>2</option>
 						<option value='3'>3</option>
 						<option value='4'>4</option>
@@ -208,7 +217,7 @@ div.section{
 					</select></td>
 					<td><select>
 						<option value='0'>0</option>
-						<option value='1'>1 - Fully traceable</option>
+						<option value='1' selected>1 - Fully traceable</option>
 						<option value='2'>2</option>
 						<option value='3'>3</option>
 						<option value='4'>4</option>
@@ -232,7 +241,7 @@ div.section{
 				</tr><tr id=tr_busiimpact>
 					<td><select>
 						<option value='0'>0</option>
-						<option value='1'>1 - Less than the cost to fix the vulnerability</option>
+						<option value='1' selected>1 - Less than the cost to fix the vulnerability</option>
 						<option value='2'>2</option>
 						<option value='3'>3 - Minor effect on annual profit</option>
 						<option value='4'>4</option>
@@ -244,7 +253,7 @@ div.section{
 					</select></td>
 					<td><select>
 						<option value='0'>0</option>
-						<option value='1'>1 - Minimal damage</option>
+						<option value='1' selected>1 - Minimal damage</option>
 						<option value='2'>2</option>
 						<option value='3'>3</option>
 						<option value='4'>4 - Loss of major accounts</option>
@@ -257,7 +266,7 @@ div.section{
 					<td><select>
 						<option value='0'>0</option>
 						<option value='1'>1</option>
-						<option value='2'>2 - Minor violation</option>
+						<option value='2' selected>2 - Minor violation</option>
 						<option value='3'>3</option>
 						<option value='4'>4</option>
 						<option value='5'>5 - Clear violation</option>
@@ -270,7 +279,7 @@ div.section{
 						<option value='0'>0</option>
 						<option value='1'>1</option>
 						<option value='2'>2</option>
-						<option value='3'>3 - One individual</option>
+						<option value='3' selected>3 - One individual</option>
 						<option value='4'>4</option>
 						<option value='5'>5 - Hundreds of people</option>
 						<option value='6'>6</option>
@@ -315,8 +324,13 @@ div.section{
 	<div style="clear:both">&nbsp;</div>
 </div>
 <script type="text/javascript">
+	var colors = ['#5f5','#ff5','#f55']
+	var scoreColors = ['#5ff','#5f5','#ff5','#f55','#b02']
 	function value2text(value){
 		return value < 3 ? "LOW" : (value < 6 ? "MEDIUM" : "HIGH");
+	}
+	function val2score(value){
+		return value < 3 ? 0 : (value < 6 ? 1 : 2);
 	}
 	function globalUpdate(){
 		var likelihood = parseFloat(document.getElementById('likelihood').textContent);
@@ -324,15 +338,13 @@ div.section{
 		var busiimpact = parseFloat(document.getElementById('busiimpact').textContent);
 		var adjust = parseFloat(document.getElementById('adjust').value);
 		var impact = ( busiimpact * adjust ) + ( techimpact * (1-adjust) )
-		function val2score(value){
-			return value < 3 ? 0 : (value < 6 ? 1 : 2);
-		}
 		function score2text(score){
 			return ['NOTE','LOW','MEDIUM','HIGH','CRITICAL'][score];
 		}
 		var score = val2score(likelihood) + val2score(impact);
 		var elm = document.getElementById('risk');
 		elm.textContent = score2text(score);
+		elm.style.backgroundColor = scoreColors[score];
 	}
 	function getStatus(){
 		var selects = document.querySelectorAll("select");
@@ -358,12 +370,15 @@ div.section{
 	sections.map(
 		function(name){
 			var updateFunc = function(){
+				this.parentNode.style.backgroundColor = colors[ val2score(this.value) ];
 				var selects = document.querySelectorAll("#tr_" + name + " select");
 				var value = Array.prototype.reduce.call( selects, function(sum,elm){
 					return sum + parseInt(elm.value);
 				},0) / parseFloat(selects.length);
 				var elm = document.getElementById(name);
 				elm.textContent = value;
+				elm.style.backgroundColor = colors[ val2score(value) ];
+				elm.nextSibling.style.backgroundColor = colors[ val2score(value) ];
 				elm.nextSibling.textContent = value2text(value);
 				globalUpdate();
 				window.location.hash = getStatus();
