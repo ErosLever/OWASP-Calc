@@ -336,6 +336,7 @@ div.section{
 	function adjustScore(elm){
 		elm.title = elm.value;
 		globalUpdate();
+		window.location.hash = getStatus();
 	}
 	document.getElementById("adjust").onchange = adjustScore;
 	var colors = ['#5f5','#ff5','#f55']
@@ -368,12 +369,14 @@ div.section{
 			else
 				return status + "," + elm.value;
 		},'');
+		status += ','+parseInt(100*parseFloat(document.getElementById('adjust').value));
 		return status;
 	}	
 	function setStatus(status){
 		var status = status.replace(/^#/,'').split(",").map(function(n){return parseInt(n)});
-		if(status.length != 16)
-			status = [1,1,0,2,1,1,1,1,2,1,1,1,1,1,2,3];
+		if(status.length != 17)
+			status = [1,1,0,2,1,1,1,1,2,1,1,1,1,1,2,3,50];
+		document.getElementById('adjust').value = status.pop() / 100.0;
 		var selects = document.querySelectorAll("select");
 		Array.prototype.map.call( selects, function(elm,index){
 			elm.value = status[index];
