@@ -382,7 +382,7 @@ div.section{
 		document.getElementById('adjust').value = clamp(status.pop(),0,100) / 100.0;
 		var selects = document.querySelectorAll("select");
 		Array.prototype.map.call( selects, function(elm,index){
-			elm.value = clamp(status[index],0,10);
+			elm.value = clamp(status[index],0,9);
 			elm.onchange();
 		});
 	}
