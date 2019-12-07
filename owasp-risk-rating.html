@@ -450,7 +450,7 @@ div.section{
     return Math.min(Math.max(num, min), max);
   }
   function setStatus(status){
-    var status = status.match(/\d+/g).map(function (x){return parseInt(x)});
+    var status = (status.match(/\d+/g) || []).map(function (x){return parseInt(x)});
     status = status.map(function(x,i){return clamp(x, 0, i<16 ? 9 : 100)})
     if(status.length != 17)
       status = [1,1,0,2,1,1,1,1,2,1,1,1,1,1,2,3,50];
